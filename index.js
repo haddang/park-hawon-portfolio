@@ -551,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Translating green leaf vectors into cafe layouts.',
                 overview: 'Cafe Clover는 일상 속에서 ‘행복(세잎)’과 ‘행운(네잎)’을 함께 느낄 수 있는 공간을 지향하는 감성 카페 브랜드입니다. 클로버가 가진 긍정적 상징을 바탕으로, 둥근 형태의 클로버 쉐입을 활용해 브랜딩했습니다. 부드러운 곡선과 안정적인 볼륨감을 통해 따뜻하고 친근한 분위기를 표현했으며, 누구나 기억하기 쉬운 미니멀 아이덴티티로 완성했습니다.',
                 media: [
-                    { type: 'image', src: 'work/cafe clover/1.png' }
+                    { type: 'image', src: 'work/cafe clover/1.jpg' }
                 ]
             },
             'neville-brody': {
@@ -565,9 +565,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Deconstructing type weights and editorial rules.',
                 overview: '네빌 브로디(Neville Brody)의 독창적인 디자인 철학, 예술 사조, 그리고 특유의 방법론을 심도 있게 분석하여 시각화하고 정리한 편집물 아카이브 프로젝트입니다. 사양은 170mm x 240mm 규격의 무선 제본 형태로 디자인 및 제안했습니다.',
                 media: [
-                    { type: 'image', src: 'work/artderector archive-neville brody/1.png' },
-                    { type: 'image', src: 'work/artderector archive-neville brody/목업2.png' },
-                    { type: 'image', src: 'work/artderector archive-neville brody/목업5.png' },
+                    { type: 'image', src: 'work/artderector archive-neville brody/1.jpg' },
+                    { type: 'image', src: 'work/artderector archive-neville brody/목업2.jpg' },
+                    { type: 'image', src: 'work/artderector archive-neville brody/목업5.jpg' },
                     { type: 'image', src: 'work/artderector archive-neville brody/4.jpg' }
                 ]
             },
@@ -633,18 +633,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 overview: '영화 007 시리즈의 상징적인 오프닝 시그니처 시퀀스를 독창적으로 재해석하여 제작한 모션 그래픽 영상 프로젝트입니다. 타이포그래피의 역동적인 전환 효과와 대담한 그래픽 레이아웃을 통해 007 특유의 긴장감, 클래식한 미감, 그리고 우아함을 감각적인 모션으로 조율했습니다.',
                 media: [
                     { type: 'video', src: 'work/007 tltle sequence/중간 - 202421728_박하원.mp4' },
-                    { type: 'image', src: 'work/007 tltle sequence/썸네일.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.34.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.58.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.15.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.28.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.57.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.13.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.22.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.34.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.48.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.23.31.png' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.30.04.png' }
+                    { type: 'image', src: 'work/007 tltle sequence/썸네일.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.34.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.58.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.15.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.28.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.57.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.13.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.22.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.34.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.48.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.23.31.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.30.04.jpg' }
                 ]
             },
 
@@ -693,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 overview: 'STAR.1 Academy는 연기자를 꿈꾸는 학생들이 \'스타\'로 성장할 수 있도록 이끄는 연기학원입니다. 의뢰자의 요구사항은 모던하고 심플한 디자인, 스타의 상징성 반영, 짙은 녹색의 차분한 분위기, 그리고 STAR와 숫자 1의 명확한 구분이었습니다. 이 조건을 기반으로 학원의 전문성과 비전을 담은 로고 디자인을 진행했습니다.',
                 media: [
                     { type: 'image', src: 'work/star.1 academy/Mockup.png' },
-                    { type: 'image', src: 'work/star.1 academy/노트북.png' }
+                    { type: 'image', src: 'work/star.1 academy/노트북.jpg' }
                 ]
             }
         };
@@ -703,7 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pageNum = String(i).padStart(2, '0');
             projectData.binjari.media.push({
                 type: 'image',
-                src: `work/binjari/202421728 박하원_최종 기획_페이지_${pageNum}.png`
+                src: `work/binjari/202421728 박하원_최종 기획_페이지_${pageNum}.jpg`
             });
         }
 
