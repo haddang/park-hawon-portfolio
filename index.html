@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Hawon | Design Workspace</title>
+    <meta name="description" content="보고, 느끼고, 해결하는 문제 해결형 디자이너 박하원의 포트폴리오 디지털 워크스페이스입니다.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css?v=10">
+
+    <!-- GSAP & Lenis Local Cache -->
+    <script src="gsap.min.js?v=10"></script>
+    <script src="ScrollTrigger.min.js?v=10"></script>
+    <script src="lenis.min.js?v=10"></script>
+    <script src="index.js?v=10"></script>
+</head>
+
+<body>
+
+    <!-- 2. Header Navigation Bar -->
+    <header class="site-header">
+        <div class="header-left">
+            <a href="#" class="nav-logo" id="navLogo">PARK HAWON</a>
+        </div>
+        <div class="header-center">
+            <button class="nav-toggle-btn active" id="viewToggle">
+                <span class="btn-label-active">COVER</span>
+                <span class="btn-divider">/</span>
+                <span class="btn-label-inactive">WORKSPACE</span>
+            </button>
+        </div>
+        <div class="header-right">
+            <button class="nav-portfolio-link" id="navPortfolio">PORTFOLIO</button>
+        </div>
+    </header>
+
+    <!-- Main View Wrap -->
+    <div class="view-wrapper">
+
+        <!-- A. COVER EDITORIAL VIEW -->
+        <main class="hero-container active" id="coverView">
+            <div class="grid-layout">
+
+                <!-- Row 1: S E E -->
+                <!-- Column 0: S (Black) -->
+                <div class="grid-item letter-item col-0 row-0" data-letter="s">
+                    <span class="letter font-sans text-black">s</span>
+                </div>
+
+                <!-- Column 1: Speech Bubble 1 -->
+                <div class="grid-item bubble-item col-1 row-0">
+                    <div class="speech-bubble pink-bubble bubble-left" id="aboutBubble">
+                        <p>보고, 느끼고, 해결하는<br><strong>문제 해결형 디자이너</strong></p>
+                    </div>
+                </div>
+
+                <!-- Column 2: E (Split top blue, bottom black) -->
+                <div class="grid-item letter-item col-2 row-0" data-letter="e1">
+                    <div class="split-letter" id="splitE1">
+                        <span class="letter-half top-half font-sans text-blue">e</span>
+                        <span class="letter-half bottom-half font-sans text-black">e</span>
+                    </div>
+                </div>
+
+                <!-- Column 3: Design Portfolio Text -->
+                <div class="grid-item text-item col-3 row-0">
+                    <div class="info-block">
+                        <div class="portfolio-tag">
+                            <span class="info-title">Design Portfolio</span>
+                            <span class="info-year">2024–2026</span>
+                        </div>
+                        <div class="arrow-indicator">
+                            <svg class="cursor-arrow" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4L20 12L12 14L8 20L4 4Z" fill="#111111" stroke="#EBEAE6" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="info-desc">Branding<br>UX·UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: E (Split top black, bottom blue) -->
+                <div class="grid-item letter-item col-4 row-0" data-letter="e2">
+                    <div class="split-letter" id="splitE2">
+                        <span class="letter-half top-half font-sans text-black">e</span>
+                        <span class="letter-half bottom-half font-sans text-blue">e</span>
+                    </div>
+                </div>
+
+                <!-- Row 2: FEEL -->
+                <!-- Column 0: F (Cursive Blue) -->
+                <div class="grid-item letter-item col-0 row-1" data-letter="f">
+                    <div class="svg-letter-wrapper">
+                        <svg class="svg-letter text-blue" viewBox="0 0 100 165">
+                            <path
+                                d="M 35,95 C 30,85 28,70 38,45 C 48,20 63,5 73,5 C 80,5 83,12 80,25 C 75,45 53,100 42,125 C 32,148 18,155 12,148 C 6,140 18,115 35,90"
+                                fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M 32,95 C 42,90 58,85 68,88" fill="none" stroke="currentColor" stroke-width="10"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Column 1.5: E (Black) -->
+                <div class="grid-item letter-item col-1-5 row-1" data-letter="e3">
+                    <span class="letter font-sans text-black">e</span>
+                </div>
+
+                <!-- Column 3: E (Blue) -->
+                <div class="grid-item letter-item col-3 row-1" data-letter="e4">
+                    <span class="letter font-sans text-blue">e</span>
+                </div>
+
+                <!-- Column 4: L (Cursive Black) -->
+                <div class="grid-item letter-item col-4 row-1" data-letter="l1">
+                    <div class="svg-letter-wrapper">
+                        <svg class="svg-letter text-black" viewBox="0 0 100 165">
+                            <path
+                                d="M 25,95 C 32,75 48,40 60,20 C 68,7 74,7 74,18 C 74,32 58,88 48,118 C 40,142 32,152 35,152 C 40,152 52,138 68,110 C 78,92 84,82 88,78"
+                                fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Row 3: SOLVE -->
+                <!-- Column 0: S (Black) -->
+                <div class="grid-item letter-item col-0 row-2" data-letter="s2">
+                    <span class="letter font-sans text-black">s</span>
+                </div>
+
+                <!-- Column 0.7: Designer info -->
+                <div class="grid-item text-item col-0-7 row-2">
+                    <div class="designer-block">
+                        <span class="designer-name">PARK HAWON</span>
+                        <span class="designer-title">Designer</span>
+                    </div>
+                </div>
+
+                <!-- Column 1.5: O (Blue Circle) -->
+                <div class="grid-item letter-item col-1-5 row-2" data-letter="o">
+                    <span class="letter font-sans text-blue">o</span>
+                </div>
+
+                <!-- Column 2.5: L (Cursive Black) -->
+                <div class="grid-item letter-item col-2-5 row-2" data-letter="l2">
+                    <div class="svg-letter-wrapper">
+                        <svg class="svg-letter text-black" viewBox="0 0 100 165">
+                            <path
+                                d="M 25,95 C 32,75 48,40 60,20 C 68,7 74,7 74,18 C 74,32 58,88 48,118 C 40,142 32,152 35,152 C 40,152 52,138 68,110 C 78,92 84,82 88,78"
+                                fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Column 3.5: V (Blue) -->
+                <div class="grid-item letter-item col-3-5 row-2" data-letter="v">
+                    <span class="letter font-sans text-blue">v</span>
+                </div>
+
+                <!-- Column 3.8: Portfolio Bubble -->
+                <div class="grid-item bubble-item col-3-8 row-2">
+                    <div class="speech-bubble pink-bubble bubble-right" id="portfolioBubble">
+                        <span class="bubble-text-bold">PORTFOLIO</span>
+                    </div>
+                </div>
+
+                <!-- Column 4.5: E (Black) -->
+                <div class="grid-item letter-item col-4-5 row-2" data-letter="e5">
+                    <span class="letter font-sans text-black">e</span>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- B. INTERACTIVE DESKTOP WORKSPACE VIEW -->
+        <div class="workspace-container" id="workspaceView" data-lenis-prevent>
+            <div class="workspace-bg-grid"></div>
+
+
+
+            <!-- Behance Feed Category Filter Bar -->
+            <div class="feed-filter-bar">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="branding">BRANDING</button>
+                <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+                <button class="filter-btn" data-filter="motion">MOTION</button>
+                <button class="filter-btn" data-filter="editorial">EDITORIAL</button>
+            </div>
+
+            <!-- Behance Feed Project Grid -->
+            <div class="feed-grid">
+
+                <!-- Project 1: Binjari -->
+                <div class="feed-card" data-project="binjari" data-category="branding ui-ux">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/binjari/01.png" alt="Binjari Branding" class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">BINJARI PROJECT</h3>
+                            <span class="feed-card-category">UX/UI APP & WEB DESIGN</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                            <span class="tool-tag">Ae</span>
+                            <span class="tool-tag">Vs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: 007 Title Sequence -->
+                <div class="feed-card" data-project="007-title" data-category="motion">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/007 tltle sequence/썸네일.png" alt="007 Title Sequence" class="feed-card-img"
+                            loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">007 Title Sequence</h3>
+                            <span class="feed-card-category">MOTION GRAPHICS</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ae</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Marimekko -->
+                <div class="feed-card" data-project="marimekko" data-category="branding">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/marimekko/1.jpg" alt="Marimekko Pattern" class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Marimekko</h3>
+                            <span class="feed-card-category">BRANDING / MEDIA</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Neville Brody Archive -->
+                <div class="feed-card" data-project="neville-brody" data-category="editorial">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/artderector archive-neville brody/1.png" alt="Neville Brody Archive"
+                            class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Neville Brody Archive</h3>
+                            <span class="feed-card-category">EDITORIAL DESIGN</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                            <span class="tool-tag">Id</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Sixth Star: The Legacy of T1 -->
+                <div class="feed-card" data-project="sixth-stars" data-category="editorial">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/sixth stars-the lagacy of t1/mockup_01.jpg" alt="Sixth Star: The Legacy of T1"
+                            class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Sixth Star: The Legacy of T1</h3>
+                            <span class="feed-card-category">EDITORIAL DESIGN</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Id</span>
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Chae Byeong Rok Archive -->
+                <div class="feed-card" data-project="chae-byeong-rok" data-category="editorial">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/chae byeong rok designer achicve/chae_byeong_rok_page_01.jpg" alt="Chae Byeong Rok Archive"
+                            class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Chae Byeong Rok Archive</h3>
+                            <span class="feed-card-category">EDITORIAL DESIGN</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Id</span>
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: RouteNote -->
+                <div class="feed-card" data-project="routenote" data-category="ui-ux">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/routenote/1.png" alt="RouteNote Design" class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">RouteNote</h3>
+                            <span class="feed-card-category">MOBILE APP UI/UX</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Cafe Clover -->
+                <div class="feed-card" data-project="cafe-clover" data-category="branding">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/cafe clover/1.png" alt="Cafe Clover Brand" class="feed-card-img" loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Cafe Clover Branding</h3>
+                            <span class="feed-card-category">BRAND DESIGN</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Star.1 Academy -->
+                <div class="feed-card" data-project="star-academy" data-category="branding">
+                    <div class="feed-card-image-wrap">
+                        <img src="work/star.1 academy/Mockup.png" alt="Star.1 Academy" class="feed-card-img"
+                            loading="lazy">
+                        <div class="feed-card-overlay">
+                            <span class="feed-card-overlay-btn">VIEW CASE</span>
+                        </div>
+                    </div>
+                    <div class="feed-card-info">
+                        <div class="feed-card-meta">
+                            <h3 class="feed-card-title">Star.1 Academy</h3>
+                            <span class="feed-card-category">IDENTITY & BRAND SYSTEM</span>
+                        </div>
+                        <div class="feed-card-tools">
+                            <span class="tool-tag">Ai</span>
+                            <span class="tool-tag">Ps</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About Me Modal Overlay -->
+    <div class="modal-overlay" id="aboutModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <h2>About Park Hawon</h2>
+                <p class="modal-tagline">보고, 느끼고, 해결하는 문제 해결형 디자이너</p>
+                <div class="modal-divider"></div>
+                <p class="modal-text">
+                    디자인은 단순히 시각적인 아름다움을 넘어, 사용자의 문제를 발견하고 이를 창의적으로 해결하는 과정이라고 믿습니다.
+                    브랜딩부터 UX/UI 디자인까지, 일관된 맥락 속에서 가치를 전달하는 디자인을 지향합니다.
+                </p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> hawon0407@naver.com</p>
+                    <p><strong>Behance:</strong> behance.net/parkhawon</p>
+                </div>
+                <div class="resume-button-wrap">
+                    <a href="resume.html" class="resume-nav-btn font-sans">이력서 보러가기 &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. Fullscreen Project Case Studies -->
+
+    <!-- PROJECT 1: SEE FEEL SOLVE -->
+    <!-- 3. Dynamic Fullscreen Project Case Study Overlay -->
+    <div class="project-overlay" id="projectOverlay" style="display: none; opacity: 0; transform: scale(0.98);">
+        <div class="overlay-header">
+            <span class="project-indicator" id="projectIndicator">01 / BRAND IDENTITY</span>
+            <button class="close-project-btn" id="closeProjectBtn">&times; CLOSE FILE</button>
+        </div>
+        <div class="project-scroll-container" id="projectScrollContainer" data-lenis-prevent>
+            <!-- Dynamically populated in index.js -->
+        </div>
+    </div>
+
+</body>
+
+</html>

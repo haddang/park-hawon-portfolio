@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Hawon — Resume</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #DFDDD8;
+            /* Exact warm beige print background from the mockup */
+            --color-black: #111111;
+            --color-pink: #D11A5B;
+            --color-blue: #3B6BB0;
+            --color-text-muted: #888888;
+            /* Muted gray for labels and dates */
+            --font-sans: 'Montserrat', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--color-black);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: 1050px;
+            background-color: var(--bg-color);
+            position: relative;
+        }
+
+        /* Top Navigation Back Button */
+        .back-nav {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .back-link {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            color: var(--color-black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.6;
+        }
+
+        .print-btn {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            background: none;
+            border: 1.5px solid var(--color-black);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            background-color: var(--color-black);
+            color: var(--bg-color);
+        }
+
+        /* 3-Column Grid Layout with balanced spacing */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1.35fr 1fr;
+            gap: 4.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 992px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            body {
+                padding: 3rem 1.5rem;
+            }
+
+            .back-nav {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        /* Left Column Styling */
+        .resume-profile-col {
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+        }
+
+        .resume-sticker {
+            background-color: var(--color-pink);
+            color: #ffffff;
+            padding: 0.35rem 0.6rem 0.3rem 0.6rem;
+            font-size: 0.82rem;
+            font-weight: 800;
+            width: fit-content;
+            transform: rotate(-4deg) translateX(-5px);
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(209, 26, 91, 0.18);
+            margin-bottom: 0.8rem;
+            font-family: var(--font-sans);
+        }
+
+        .resume-title {
+            font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+            font-weight: 900;
+            line-height: 1.25;
+            color: var(--color-black);
+            margin: 0;
+            font-family: var(--font-sans);
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            /* Prevents wrapping, ensuring '디자이너 박하원입니다.' stays on one line */
+        }
+
+        .resume-title-highlight {
+            color: var(--color-blue);
+            /* Solid brand blue text color */
+            background-color: rgba(59, 107, 176, 0.15);
+            /* Light highlight box */
+            padding: 0.1rem 0.35rem;
+            border-radius: 2px;
+        }
+
+        /* Group 1: Personal Details (Muted labels, Bold black values) */
+        .resume-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .resume-info-item-personal {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            align-items: baseline;
+        }
+
+        .resume-info-lbl-muted {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            color: var(--color-text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .resume-info-val-bold {
+            font-weight: 800;
+            color: var(--color-black);
+            font-size: 0.95rem;
+        }
+
+        /* Group 2: Contact Details (Bold black labels, Muted gray values) */
+        .resume-contact-group {
+            border-top: 1.5px solid rgba(17, 17, 17, 0.12);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .resume-info-item-contact {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            align-items: baseline;
+        }
+
+        .resume-info-lbl-bold {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            color: var(--color-black);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .resume-info-val-muted {
+            font-weight: 500;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Sections for Middle & Right Columns */
+        .resume-section {
+            margin-bottom: 2.2rem;
+        }
+
+        .resume-section-title {
+            font-family: var(--font-sans);
+            font-size: 1.05rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: var(--color-black);
+            margin-bottom: 1.4rem;
+            border-bottom: 2px solid var(--color-black);
+            padding-bottom: 0.25rem;
+            width: fit-content;
+        }
+
+        .resume-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.95rem;
+        }
+
+        /* Text Overflow & Clipping Safeguard for Lists */
+        .resume-item {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            line-height: 1.45;
+            font-size: 0.88rem;
+            align-items: start;
+        }
+
+        .resume-date {
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .resume-desc {
+            color: var(--color-black);
+            font-weight: 700;
+            word-break: keep-all;
+            /* Keeps Korean words together without breaking middle letters */
+        }
+
+        /* Skills progress bars */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.95rem;
+        }
+
+        .skill-item {
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .skill-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--color-black);
+            color: var(--bg-color);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            font-family: var(--font-sans);
+        }
+
+        .skill-icon svg {
+            fill: currentColor;
+        }
+
+        .skill-bar-bg {
+            height: 6px;
+            background-color: rgba(17, 17, 17, 0.15);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background-color: var(--color-black);
+            border-radius: 3px;
+        }
+
+        /* Print Media Style Optimization */
+        @media print {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 0;
+            }
+
+            .back-nav {
+                display: none;
+            }
+
+            .resume-container {
+                max-width: 100%;
+            }
+
+            .resume-grid {
+                grid-template-columns: 1.15fr 1.35fr 1fr !important;
+                gap: 2rem !important;
+            }
+
+            .resume-sticker {
+                border: 1px solid var(--color-pink);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-bar-bg {
+                border: 1px solid #000000;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-bar-fill {
+                background-color: #000000 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .skill-icon {
+                border: 1px solid #000000;
+                background-color: #000000 !important;
+                color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container">
+
+        <!-- Header Controls -->
+        <nav class="back-nav">
+            <a href="index.html" class="back-link">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                    style="display:inline-block; vertical-align:middle; margin-right:4px;">
+                    <path d="M6 12L7.4 10.6L2.8 6H18V4H2.8L7.4 0.6L6 0L0 6L6 12Z" fill="currentColor" />
+                </svg>
+                BACK TO WORKSPACE
+            </a>
+            <button class="print-btn" onclick="window.print()">PRINT RESUME</button>
+        </nav>
+
+        <!-- Main Resume Content Grid -->
+        <main class="resume-grid">
+
+            <!-- Column 1: Profile & Contacts (Left) -->
+            <div class="resume-profile-col">
+                <div>
+                    <div class="resume-sticker">사람의 경험을 바꾸는</div>
+                    <h1 class="resume-title"><span class="resume-title-highlight">디자이너 박하원</span>입니다.</h1>
+                </div>
+
+                <div class="resume-info-list">
+                    <div class="resume-info-item-personal">
+                        <span class="resume-info-lbl-muted">NAME</span>
+                        <span class="resume-info-val-bold">박하원</span>
+                    </div>
+                    <div class="resume-info-item-personal">
+                        <span class="resume-info-lbl-muted">BIRTH</span>
+                        <span class="resume-info-val-bold">2004. 04. 07</span>
+                    </div>
+                    <div class="resume-info-item-personal">
+                        <span class="resume-info-lbl-muted">GPA (현)</span>
+                        <span class="resume-info-val-bold">4.25 <span
+                                style="color:var(--color-text-muted); font-weight:500;">/ 4.5</span></span>
+                    </div>
+                    <div class="resume-info-item-personal">
+                        <span class="resume-info-lbl-muted">GPA (전적)</span>
+                        <span class="resume-info-val-bold">4.38 <span
+                                style="color:var(--color-text-muted); font-weight:500;">/ 4.5</span></span>
+                    </div>
+                </div>
+
+                <div class="resume-contact-group">
+                    <div class="resume-info-item-contact">
+                        <span class="resume-info-lbl-bold">PHONE</span>
+                        <span class="resume-info-val-muted">010-4400-7483</span>
+                    </div>
+                    <div class="resume-info-item-contact">
+                        <span class="resume-info-lbl-bold">E-MAIL</span>
+                        <span class="resume-info-val-muted">hawon0407@naver.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: History (Middle) -->
+            <div class="resume-history-col">
+
+                <!-- EDUCATION -->
+                <section class="resume-section">
+                    <h2 class="resume-section-title">EDUCATION</h2>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <span class="resume-date">2028</span>
+                            <span class="resume-desc">건국대학교 시각영상디자인학과 졸업(예정)</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2026</span>
+                            <span class="resume-desc">숭의여자대학교 시각디자인과 졸업</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2023</span>
+                            <span class="resume-desc">교하고등학교 졸업</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SCHOLARSHIP -->
+                <section class="resume-section">
+                    <h2 class="resume-section-title">SCHOLARSHIP</h2>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <span class="resume-date">2026-2</span>
+                            <span class="resume-desc">성적우수상(졸업자 우수 5인)</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2025-2</span>
+                            <span class="resume-desc">성적우수장학금 B</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2025-1</span>
+                            <span class="resume-desc">성적최우수장학금</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024-2</span>
+                            <span class="resume-desc">취업포트폴리오 경진대회 최우수상</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024-2</span>
+                            <span class="resume-desc">숭의엘리트장학금2</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024-2</span>
+                            <span class="resume-desc">우수인재장학금2-4</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024-2</span>
+                            <span class="resume-desc">한영재단 디자인 산학협력 장학금</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024-1</span>
+                            <span class="resume-desc">성적우수장학금 B</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VOLUNTEERING -->
+                <section class="resume-section">
+                    <h2 class="resume-section-title">VOLUNTEERING</h2>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <span class="resume-date">2024.11</span>
+                            <span class="resume-desc">중구교육지원센터 운영 관리 지원</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024.11</span>
+                            <span class="resume-desc">방배도서관 반납도서 배가업무</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024.10</span>
+                            <span class="resume-desc">서울공예박물관 전시실 체험보조</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Column 3: Credentials (Right) -->
+            <div class="resume-credentials-col">
+
+                <!-- CERTIFICATION -->
+                <section class="resume-section">
+                    <h2 class="resume-section-title">CERTIFICATION</h2>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <span class="resume-date">2026.08</span>
+                            <span class="resume-desc">GTQi(그래픽기술자격 일러스트) 1급</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2025.07</span>
+                            <span class="resume-desc">2종 자동 운전면허증</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2024.08</span>
+                            <span class="resume-desc">GTQ(그래픽기술자격) 1급</span>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2020.11</span>
+                            <span class="resume-desc">바리스타 2급</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SKILL -->
+                <section class="resume-section">
+                    <h2 class="resume-section-title">SKILL</h2>
+                    <div class="skills-container">
+
+                        <!-- Photoshop -->
+                        <div class="skill-item">
+                            <div class="skill-icon">Ps</div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 70%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Illustrator -->
+                        <div class="skill-item">
+                            <div class="skill-icon">Ai</div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- InDesign -->
+                        <div class="skill-item">
+                            <div class="skill-icon">Id</div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- After Effects -->
+                        <div class="skill-item">
+                            <div class="skill-icon">Ae</div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 8 12" fill="none" style="width: 12px; height: 16px; display: block;">
+                                    <path
+                                        d="M2 12C0.9 12 0 11.1 0 10C0 8.9 0.9 8 2 8H4V12H2ZM2 8C0.9 8 0 7.1 0 6C0 4.9 0.9 4 2 4H4V8H2ZM2 4C0.9 4 0 3.1 0 2C0 0.9 0.9 0 2 0C3.1 0 4 0.9 4 2V4H2ZM6 8C4.9 8 4 7.1 4 6C4 4.9 4.9 4 6 4C7.1 4 8 4.9 8 6C8 7.1 7.1 8 6 8ZM6 4C4.9 4 4 3.1 4 2C4 0.9 4.9 0 6 0C7.1 0 8 0.9 8 2C8 3.1 7.1 4 6 4Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
