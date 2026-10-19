@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Weaving organic floral print forms into digital screens.',
                 overview: '핀란드의 라이프스타일 브랜드 마리메꼬(Marimekko)의 독창적인 패턴 언어를 재해석하고 현대적인 감성으로 브랜드를 리브랜딩하는 디자인 프로젝트입니다. 생성형 AI 기술을 활용하여 브랜드 고유의 대담하고 예술적인 프린트 양식을 담아낸 브랜드 프로모션 영상을 기획 및 제작했습니다. 다양한 컬러 스터디와 디지털 스크린 시뮬레이션을 포함합니다.',
                 media: [
-                    { type: 'video', src: 'work/marimekko/진짜최종.mp4' },
+                    { type: 'video', src: 'work/marimekko/marimekko_video.mp4' },
                     { type: 'image', src: 'work/marimekko/2.jpg' }
                 ]
             },
@@ -566,8 +566,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 overview: '네빌 브로디(Neville Brody)의 독창적인 디자인 철학, 예술 사조, 그리고 특유의 방법론을 심도 있게 분석하여 시각화하고 정리한 편집물 아카이브 프로젝트입니다. 사양은 170mm x 240mm 규격의 무선 제본 형태로 디자인 및 제안했습니다.',
                 media: [
                     { type: 'image', src: 'work/artderector archive-neville brody/1.jpg' },
-                    { type: 'image', src: 'work/artderector archive-neville brody/목업2.jpg' },
-                    { type: 'image', src: 'work/artderector archive-neville brody/목업5.jpg' },
+                    { type: 'image', src: 'work/artderector archive-neville brody/mockup_02.jpg' },
+                    { type: 'image', src: 'work/artderector archive-neville brody/mockup_05.jpg' },
                     { type: 'image', src: 'work/artderector archive-neville brody/4.jpg' }
                 ]
             },
@@ -632,19 +632,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Translating classic espionage sequence dynamics into typography.',
                 overview: '영화 007 시리즈의 상징적인 오프닝 시그니처 시퀀스를 독창적으로 재해석하여 제작한 모션 그래픽 영상 프로젝트입니다. 타이포그래피의 역동적인 전환 효과와 대담한 그래픽 레이아웃을 통해 007 특유의 긴장감, 클래식한 미감, 그리고 우아함을 감각적인 모션으로 조율했습니다.',
                 media: [
-                    { type: 'video', src: 'work/007 tltle sequence/중간 - 202421728_박하원.mp4' },
-                    { type: 'image', src: 'work/007 tltle sequence/썸네일.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.34.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.47.58.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.15.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.28.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.48.57.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.13.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.22.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.34.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-20 오후 9.49.48.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.23.31.jpg' },
-                    { type: 'image', src: 'work/007 tltle sequence/스크린샷 2026-04-21 오전 12.30.04.jpg' }
+                    { type: 'video', src: 'work/007 tltle sequence/007_video.mp4' },
+                    { type: 'image', src: 'work/007 tltle sequence/thumbnail.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_01.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_02.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_03.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_04.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_05.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_06.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_07.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_08.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_09.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_10.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_11.jpg' },
+                    { type: 'image', src: 'work/007 tltle sequence/screenshot_12.jpg' }
                 ]
             },
 
@@ -659,8 +660,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Coordinating brand principles and motion showcase.',
                 overview: '빈자리는 카공족이 지도 기반으로 카페를 탐색하고, 실시간으로 빈자리를 확인하여 예약까지 할 수 있는 서비스입니다. 사용자용 앱 디자인뿐만 아니라 점주들이 매장을 수월하게 관리할 수 있도록 사장님용 포스기(POS) 웹 화면까지 함께 설계했습니다.',
                 media: [
-                    { type: 'image', src: 'work/binjari/01.png' },
-                    { type: 'video', src: 'work/binjari/기말 - 202421728_박하원 포폴용.mp4' }
+                    { type: 'image', src: 'work/binjari/01.jpg' },
+                    { type: 'video', src: 'work/binjari/binjari_video.mp4' }
                 ]
             },
             'routenote': {
@@ -674,7 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Synthesizing dynamic color theory with geometric lines.',
                 overview: 'RouteNote는 여행을 더 효율적으로 계획하고 더 깊이 기록할 수 있도록 설계한 AI 기반 맞춤형 여행 플래너 앱입니다. 사용자의 취향과 여행 패턴을 분석하여 일정과 동선을 자동 최적화하고, 상황에 따라 실시간 추천을 제공합니다. 여행 중 발견과 감정을 자연스럽게 기록하며, 개인화된 여행 경험을 완성하는 서비스입니다.',
                 media: [
-                    { type: 'image', src: 'work/routenote/1.png' },
+                    { type: 'image', src: 'work/routenote/1.jpg' },
                     { type: 'image', src: 'work/routenote/2.jpg' },
                     { type: 'image', src: 'work/routenote/3.jpg' },
                     { type: 'image', src: 'work/routenote/4.gif' },
@@ -692,8 +693,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 heading: 'Branding institutions through sleek device mockups.',
                 overview: 'STAR.1 Academy는 연기자를 꿈꾸는 학생들이 \'스타\'로 성장할 수 있도록 이끄는 연기학원입니다. 의뢰자의 요구사항은 모던하고 심플한 디자인, 스타의 상징성 반영, 짙은 녹색의 차분한 분위기, 그리고 STAR와 숫자 1의 명확한 구분이었습니다. 이 조건을 기반으로 학원의 전문성과 비전을 담은 로고 디자인을 진행했습니다.',
                 media: [
-                    { type: 'image', src: 'work/star.1 academy/Mockup.png' },
-                    { type: 'image', src: 'work/star.1 academy/노트북.jpg' }
+                    { type: 'image', src: 'work/star.1 academy/Mockup.jpg' },
+                    { type: 'image', src: 'work/star.1 academy/laptop.jpg' }
                 ]
             }
         };
@@ -703,7 +704,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pageNum = String(i).padStart(2, '0');
             projectData.binjari.media.push({
                 type: 'image',
-                src: `work/binjari/202421728 박하원_최종 기획_페이지_${pageNum}.jpg`
+                src: `work/binjari/planning_page_${pageNum}.jpg`
             });
         }
 
